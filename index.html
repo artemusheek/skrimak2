@@ -1,31 +1,42 @@
 <!DOCTYPE html>
-<html lang="en"
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, intital-scale=1.0>
-    <title>Is SoundTag is make is artemusheek</title>
-
-    <!-- reset css link  -->
-    <link rel="stylesheet" href="reset.css">
-
-
-     <!-- font link  -->
-      <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap" rel="stylesheet" type="text/css">
-
+    <title>Video</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: black;
+        }
+        video {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+    </style>
 </head>
-
 <body>
-     
-<iframe src="https://embed.screenapp.io/app/v/0xhcVCwX3c?embed=true" width="100%" height="960" frameborder="0" allowfullscreen></iframe>
+    <video id="myVideo" autoplay muted playsinline loop>
+        <source src="https://github.com/artemusheek/soundtag-is-artemusheek.github.io./raw/refs/heads/main/video.mp4">
+    </video>
 
-<script src="script.js"></script>
+    <script>
+        const video = document.getElementById('myVideo');
+        video.volume = 1.0;
 
+        // Видео сразу начнет воспроизводиться с выключенным звуком
+        // Включаем звук после первого взаимодействия
+        document.addEventListener('click', function() {
+            video.muted = false;
+        });
+
+        // Также включаем звук при любом другом взаимодействии
+        document.addEventListener('keydown', function() {
+            video.muted = false;
+        });
+    </script>
 </body>
-
-
 </html>
-
 <div class="bottom-text">
     <h3 class="text1">соундтэг от artemusheek</h3>
 </div>
@@ -33,4 +44,5 @@
 <div class="bottom-text">
     <h4 class="text2">version 1.003</h4>
 </div>
+
 
